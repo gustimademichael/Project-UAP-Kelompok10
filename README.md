@@ -1,4 +1,4 @@
-# ☆*GAME KECEMPLUNG*☆
+# ☆ *GAME KECEMPLUNG* ☆
 
 ## 📌 Deskripsi : 
 Kecemplung adalah sebuah game sederhana di mana pemain mengendalikan sebuah keranjang untuk menangkap berbagai objek yang jatuh dari bagian atas layar. 
