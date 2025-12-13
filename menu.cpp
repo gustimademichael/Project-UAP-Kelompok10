@@ -12,19 +12,16 @@ int menu() {
     keypad(w, TRUE);
     curs_set(0);
 
-    // Warna
     if (has_colors()) {
         start_color();
-        init_pair(1, COLOR_RED,    COLOR_BLACK);   // merah
-        init_pair(2, COLOR_WHITE,  COLOR_BLACK);   // putih
+        init_pair(1, COLOR_CYAN, COLOR_BLACK);     // ASCII
         init_pair(3, COLOR_CYAN,   COLOR_BLACK);   // teks menu
-        init_pair(4, COLOR_YELLOW, COLOR_BLACK);   // highlight
+        init_pair(4, COLOR_YELLOW, COLOR_BLACK);   // highlight menu
     }
 
     int highlight = 0;
     const char* choices[3] = {"Play", "About", "Exit"};
 
-    // ASCII
     const char* line1 = "    __ __ ____________________  _______  __    __  ___   ________ ";
     const char* line2 = "   / //_// ____/ ____/ ____/  |/  / __ \\/ /   / / / / | / / ____/ ";
     const char* line3 = "  / ,<  / __/ / /   / __/ / /|_/ / /_/ / /   / / / /  |/ / / __    ";
@@ -35,28 +32,16 @@ int menu() {
         werase(w);
         box(w, 0, 0);
 
-        // ===============================
-        // ASCII ART WARNA MERAH (baris atas)
-        // ===============================
-        wattron(w, COLOR_PAIR(1));
-        mvwprintw(w, 1, 3, "%s", line1);
-        mvwprintw(w, 2, 3, "%s", line2);
-        wattroff(w, COLOR_PAIR(1));
+    // menambah warna pada teks ASCII menjadi warna light aqua
+    wattron(w, COLOR_PAIR(1));
+    mvwprintw(w, 1, 3, "%s", line1);
+    mvwprintw(w, 2, 3, "%s", line2);
+    mvwprintw(w, 3, 3, "%s", line3);
+    mvwprintw(w, 4, 3, "%s", line4);
+    mvwprintw(w, 5, 3, "%s", line5);
+    wattroff(w, COLOR_PAIR(1));
 
-        // Baris tengah (putih)
-        wattron(w, COLOR_PAIR(1));
-        mvwprintw(w, 3, 3, "%s", line3);
-        wattroff(w, COLOR_PAIR(1));
-
-        // Dua baris bawah (putih)
-        wattron(w, COLOR_PAIR(2));
-        mvwprintw(w, 4, 3, "%s", line4);
-        mvwprintw(w, 5, 3, "%s", line5);
-        wattroff(w, COLOR_PAIR(2));
-
-        // ===============================
-        // MENU
-        // ===============================
+    // menu untuk memilih 3 opsi yaitu play,about,exit 
         for (int i = 0; i < 3; i++) {
 
             wattron(w, COLOR_PAIR(3));
