@@ -29,3 +29,7 @@ Yang berisi :
 - Logika untuk sistem skor dan pengurangan nyawa.
 - Logika untuk Game Over.
 
+## 👥 Kontributor
+1. Gusti Made Michael M (2517051003)
+2. Nadia Putri Azahra (2517051034)
+3. Siti Zulaika (2517051017)
